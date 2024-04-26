@@ -1,0 +1,32 @@
+.pageLine:not(:last-child){
+    margin-bottom: 20px;
+}
+
+.pageLine__subtitleWrapper{
+    margin-bottom: 8px;
+    padding: 0 10px;
+}
+
+.pageLine__subtitle{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.pageLine__discriptionText{
+    font-size: 18px;
+    color: #777777;
+}
+
+.pageLine__discription{
+    margin-top: 5px;
+    display: flex;
+}
+
+.pageLine__showAll{
+    font-size: 16px;
+    margin-left: auto;
+}
+
+.pageLine__albums {
+    display: flex;
+}

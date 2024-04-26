@@ -1,0 +1,20 @@
+.navbarItem:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.itemHref {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.itemImg {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.itemspan {
+    color: black;
+    font-size: 18px;
+}

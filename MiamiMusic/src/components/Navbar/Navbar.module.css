@@ -1,0 +1,10 @@
+.navbar{
+    grid-area: navbar;
+    align-self: start;
+    list-style-type: none;
+    width: 420px;
+    padding: 16px 24px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 8px 24px rgba(129, 135, 189, 0.15);
+}

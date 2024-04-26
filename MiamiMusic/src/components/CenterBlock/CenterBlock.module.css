@@ -1,0 +1,31 @@
+.centerBlock {
+    box-shadow: 0px 8px 24px rgba(129, 135, 189, 0.15);
+    background-color: #fff;
+    border-radius: 8px;
+    width: 958px;
+    grid-area: centerblock;
+    
+}
+.centerBlock__content {
+    padding: 0 8px;
+}
+
+.content__button{
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin: 100px auto 100px auto;
+}
+
+.content__button span {
+    font-size: 32px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.contentSpasing {
+    padding: 0 24px
+    /*height: calc(100vh - 100px); 
+    overflow-y: auto;*/
+}

@@ -1,0 +1,64 @@
+.playlists {
+   grid-area: playlists;
+   box-shadow: 0px 8px 24px rgba(129, 135, 189, 0.15);
+    width: 420px;
+    background-color: #fff;
+    border-radius: 8px;
+    min-height: 83vh;
+}
+
+.head {
+    padding: 16px 24px 20px 24px;
+    display: flex;
+    align-items: center;
+}
+
+.head__text {
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+}
+
+.head__img {
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+}
+
+.head__span {
+    font-size: 18px;
+}
+
+.plusImg {
+    width: 20px;
+    height: 20px;
+}
+
+.plugArea {
+    padding: 0px 8px 8px 8px;
+}
+
+.plug {
+    border-radius: 8px;
+    background-color: #F5F7F9;
+    padding: 16px;
+}
+
+.plug__text {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.plug__discription{
+    display: block;
+    font-size: 14px;
+    margin-bottom: 12px ;
+}
+
+.plug__button{
+    font-size: 14px;
+    padding: 5px 16px;
+    border-radius: 24px;
+    border: 1px solid black;
+}

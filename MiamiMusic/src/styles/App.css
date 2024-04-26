@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter Variable', sans-serif;
+}
+
+button {
+    font-family: 'Inter Variable', sans-serif;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.wrapper {
+    padding: 8px;
+    display: grid;
+    align-items: start;
+    grid-template-areas: 
+    "menu centerblock";
+    grid-gap: 8px;  
+    justify-content: center;
+}
+
+.menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    grid-area: menu;
+    display: grid;
+    grid-gap: 8px;
+    grid-template-areas: 
+    "navbar"
+    "playlists";
+}
