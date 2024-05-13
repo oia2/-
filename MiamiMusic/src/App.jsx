@@ -10,6 +10,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainPage from './pages/mainPage';
 import {observer} from "mobx-react-lite";
 import Registration from './pages/registration/registration';
+import NewPage from './pages/newPage';
+import { MusicProvider } from '../MusicContext/MusicContext';
 
 function App() { 
   const {store} = useContext(Context);
@@ -22,12 +24,15 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/login" element={<Login />}/>
-        <Route path="/registration" element={<Registration />}/>
-        <Route path="*" element={<MainPage />}/>
-      </Routes>
-    </BrowserRouter>
+      <MusicProvider>
+        <Routes>
+          <Route path="/login" element={<Login />}/>
+          <Route path="/registration" element={<Registration />}/>
+          <Route path="/new" element={<NewPage />}/>
+          <Route path="*" element={<MainPage />}/>
+        </Routes>
+      </MusicProvider>
+   </BrowserRouter>
   )
 }
 

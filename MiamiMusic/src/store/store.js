@@ -63,7 +63,6 @@ class Store {
 
     async checkAuth() {
         try {
-            console.log(1);
             const response = await AuthService.refresh();
             localStorage.setItem('token', response.data.accessToken);
             this.setAuth(true);

@@ -1,15 +1,19 @@
-import React from 'react';
-import classes from './NavbarItem.module.css'
 
-const NavbarItem = ({children, ...props}) => {
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import classes from './NavbarItem.module.css';
+
+const NavbarItem = ({ link, img, children }) => {
     return (
         <li className={classes.navbarItem}>
-            <a className={classes.itemHref} href="#">
-                <img className={classes.itemImg} src={props.img} alt="" />
-                <span className={classes.itemspan}>
-                    {children}
-                </span>
-            </a>
+            <NavLink 
+                to={link} 
+                className={({ isActive }) => 
+                    `${classes.itemHref} ${isActive ? classes.active : ''}`}
+            >
+                <img src={img} alt="" className={classes.itemImg} />
+                <span className={classes.itemspan}>{children}</span>
+            </NavLink>
         </li>
     );
 }

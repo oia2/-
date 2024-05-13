@@ -1,0 +1,30 @@
+.pageLine {
+    margin-top: 24px;
+}
+
+.pageLine__subtitleWrapper{
+    margin-bottom: 8px;
+    padding: 0 10px;
+}
+
+.pageLine__subtitle{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.pageLine__discriptionText{
+    font-size: 18px;
+    color: #777777;
+}
+
+.pageLine__discription{
+    margin-top: 5px;
+    display: flex;
+}
+
+.pageLine__albums {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+

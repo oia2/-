@@ -17,6 +17,7 @@ app.use(cors({
 }));
 app.use('/api', router);
 app.use(errorMiddleware);
+app.use('/static', express.static('public'));
 
 const start = async () => {
     try {

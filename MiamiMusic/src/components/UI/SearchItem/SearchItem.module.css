@@ -1,0 +1,73 @@
+.title {
+    font-size: 14px;
+    display: flex;
+}
+
+.title:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.title__img {
+    width: 40px;
+    height: 40px;
+}
+
+.play__bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(24, 11, 11,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.play {
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: #A8DADC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play__imgPlay {
+    width: 14px;
+    height: 13px;
+}
+
+.play__imgStop {
+    width: 12px;
+    height: 12px;
+}
+
+.title__imgWrapper {
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+    position: relative; 
+}
+
+.title__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trackTitle {    
+    width: 150px;
+    font-weight: 500;
+    margin-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.author {
+    color: #777777;
+}

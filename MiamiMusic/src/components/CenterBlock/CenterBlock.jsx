@@ -5,10 +5,10 @@ import playSvg from '../../svg/play.svg'
 import PageLine from '../PageLine/PageLine';
 import Footer from '../UI//footer/footer';
 
-const CenterBlock = () => {
+const CenterBlock = ({ playSong}) => {
     return (
         <div className={classes.centerBlock}>
-            <Header />
+            <Header playSong={playSong}/>
             <div className={classes.contentSpasing}>
                 <div className={classes.centerBlock__content}>
                     <button className={classes.content__button}>
@@ -17,10 +17,12 @@ const CenterBlock = () => {
                     </button>
                 </div>
                 <PageLine 
+                    playSong={playSong}
                     subtitle='Новинки'
                     discriptionText='Новые треки, альбомы и сборники'>
                 </PageLine>
                 <PageLine
+                    playSong={playSong}
                     subtitle='Популярные плейлисты'
                     discriptionText='Собрано с душой'>
                 </PageLine>

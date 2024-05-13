@@ -65,10 +65,10 @@ class UserController {
         }
     }
 
-    async getUsers(req, res, next) {
+    async getTracks(req, res, next) {
         try {
-            const users = await userService.getAllUsers();
-            return res.json(users);
+            const tracks = await userService.getAllTracks();
+            return res.json(tracks);
         } catch(e) {
             next(e)
         }

@@ -110,12 +110,14 @@ class UserService {
         }
     }
 
-    async getAllUsers() {
-        const checkUserQuery = 'SELECT * FROM public."Users"';
+    async getAllTracks() {
+        const checkUserQuery = 'SELECT title, author, img, url FROM public."Music"';
         const checkUserResult = await client.query(checkUserQuery);
         const users = checkUserResult.rows;
         return users
     }
+
+
 }
 
 module.exports = new UserService();

@@ -5,14 +5,14 @@ import { Link } from 'react-router-dom';
 import { Context } from '../../../main';
 import {observer} from "mobx-react-lite";
 
-const Header = () => {
+const Header = ({playSong}) => {
     const {store} = useContext(Context);
 
 
     if (!store.isAuth) {
         return(
         <div className={classes.header}>
-            <MyInput />
+            <MyInput playSong={playSong}/>
             
             <div className={classes.authentication}>
                 <Link to="/registration" className={classes.registration}>Зарегистрироваться</Link>
@@ -23,7 +23,7 @@ const Header = () => {
     }
     return (
         <div className={classes.header}>
-            <MyInput />
+            <MyInput playSong={playSong}/>
             <button onClick={() => store.logout()} className={classes.logout}>Выйти</button>
             
         </div>
