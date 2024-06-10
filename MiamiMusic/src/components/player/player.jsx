@@ -6,7 +6,10 @@ import playPlayer from '../../svg/playPlayer.svg';
 import pausePl from '../../svg/pausePl.svg';
 import sound from '../../svg/sound.svg';
 import repeatW from '../../svg/repeatW.svg';
-import shuffleW from '../../svg/shuffleW.svg'
+import shuffleW from '../../svg/shuffleW.svg';
+import heart from '../../svg/heart.svg';
+import plus16 from '../../svg/plus16.svg';
+
 
 const Player = ({audioElem, isplaying, setisplaying, currentSong, setCurrentSong, songs})=> {
   if (!currentSong) {
@@ -161,6 +164,10 @@ const getRandomSong = (currentSong) => {
       </div>
       <div className={classes.navigator}>
         <div className={classes.controls}>
+          <div className={classes.playlistControls}>
+            <img className={classes.heart} src={heart} alt="" />
+            <img className={classes.plus16  } src={plus16} alt="" />
+          </div>
           <div className={classes.controls__center}>
           <img src={shuffleW} className={`${classes.btn__shuffle} ${isShuffle ? classes.shuffleActive : classes.shuffleInactive}`} onClick={toggleShuffle} />
             <img src={back} className={classes.btn__back} onClick={skipBack} />

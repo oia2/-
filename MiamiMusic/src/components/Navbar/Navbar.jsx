@@ -14,7 +14,7 @@ const Navbar = () => {
             <NavbarItem link="/new" img={newSvg}>
                 Новинки
             </NavbarItem>
-            <NavbarItem link="/login" img={shareSvg}>
+            <NavbarItem link="/share" img={shareSvg}>
                 Поделиться плейлистом
             </NavbarItem>
         </ul>

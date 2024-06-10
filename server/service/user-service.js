@@ -111,12 +111,39 @@ class UserService {
     }
 
     async getAllTracks() {
-        const checkUserQuery = 'SELECT title, author, img, url FROM public."Music"';
+        const checkUserQuery = 'SELECT id, title, author, img, url FROM public."Music"';
         const checkUserResult = await client.query(checkUserQuery);
         const users = checkUserResult.rows;
         return users
     }
 
+    async likeTraks(userId, trackId) {
+        const playlistTitle = "Мне нравится";
+
+            // Проверка существования плейлиста
+            const checkPlaylistQuery = 'SELECT * FROM public."PlayLists" p INNER JOIN public."UsersPlayLists" up ON p."playlistid" = up."playlistid" WHERE up."userid" = $1 AND p."title" = $2';
+            const checkPlaylistResult = await client.query(checkPlaylistQuery, [userId, playlistTitle]);
+            let playlistId;
+            
+            if (checkPlaylistResult.rows.length === 0) {
+                // Создание плейлиста
+                const createPlaylistQuery = 'INSERT INTO public."PlayLists" (title) VALUES ($1) RETURNING "playlistid"';
+                const createPlaylistResult = await client.query(createPlaylistQuery, [playlistTitle]);
+                playlistId = createPlaylistResult.rows[0].playlistid;
+                
+                // Связывание плейлиста с пользователем
+                const associatePlaylistQuery = 'INSERT INTO public."UsersPlayLists" ("userid", "playlistid") VALUES ($1, $2)';
+                await client.query(associatePlaylistQuery, [userId, playlistId]);
+            } else {
+                playlistId = checkPlaylistResult.rows[0].playlistid;
+            }
+
+           
+            const addTrackQuery = 'INSERT INTO public."PlayListsMusic" ("playlistid", "musicid") VALUES ($1, $2)';
+            await client.query(addTrackQuery, [playlistId, trackId]);
+
+            return { message: 'Track liked successfully' };
+    }
 
 }
 

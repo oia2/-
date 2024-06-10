@@ -3,11 +3,11 @@ import '../styles/App.css'
 import Navbar from './Navbar/Navbar';
 import Playlists from './Playlists/Playlists';
 
-const Menu = () => {
+const Menu = ({playSong}) => {
     return (
         <div className='menu'>
             <Navbar></Navbar>
-            <Playlists></Playlists>
+            <Playlists playSong={playSong}></Playlists>
         </div>
     );
 }

@@ -3,7 +3,6 @@ import classes from './PageLineItem.module.css';
 import img from '../../../img/luchick.jfif';
 import imgPlay from '../../../svg/play_2.svg';
 import imgStop from '../../../svg/pause_2.svg';
-import luchik from '../../../mp3/Luchik.mp3'; // Путь к файлу музыки
 
 const PageLineItem = ({ song, playSong }) => {
     const [isHovering, setIsHovering] = useState(false);

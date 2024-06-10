@@ -7,7 +7,7 @@ import Player from '../components/player/player';
 const MainPage = () => {
     const [songs, setSongs] = useState([]);
     const [isplaying, setisplaying] = useState(false);
-    const [currentSong, setCurrentSong] = useState(null); // Изначально null
+    const [currentSong, setCurrentSong] = useState(null);
     const audioElem = useRef();
 
     useEffect(() => {
@@ -16,7 +16,7 @@ const MainPage = () => {
                 const response = await MusicService.fetchMusic();
                 setSongs(response.data);
                 if (response.data.length > 0) {
-                    setCurrentSong(response.data[0]);  // Установка после загрузки
+                    setCurrentSong(response.data[0]);
                 }
             } catch (e) {
                 console.log("Error fetching music: ", e);
@@ -47,7 +47,7 @@ const MainPage = () => {
         setCurrentSong(song);
         setisplaying(true);
     } else {
-        setisplaying(false);  // Останавливаем воспроизведение
+        setisplaying(false);
     }
   };
     return (
@@ -55,8 +55,9 @@ const MainPage = () => {
         <div className="wrapper">
             <audio src={`http://localhost:5000${currentSong?.url}`} ref={audioElem} onTimeUpdate={onPlaying} />
             <Player songs={songs} setSongs={setSongs} isplaying={isplaying} setisplaying={setisplaying} audioElem={audioElem} currentSong={currentSong} setCurrentSong={setCurrentSong} />
-            <Menu></Menu>
+            <Menu playSong={handlePlaySong}></Menu>
             <CenterBlock playSong={handlePlaySong}></CenterBlock>
+            
       </div>
     );
 }

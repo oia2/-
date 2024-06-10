@@ -12,6 +12,7 @@ import {observer} from "mobx-react-lite";
 import Registration from './pages/registration/registration';
 import NewPage from './pages/newPage';
 import { MusicProvider } from '../MusicContext/MusicContext';
+import SharePage from './pages/sharePage';
 
 function App() { 
   const {store} = useContext(Context);
@@ -29,6 +30,7 @@ function App() {
           <Route path="/login" element={<Login />}/>
           <Route path="/registration" element={<Registration />}/>
           <Route path="/new" element={<NewPage />}/>
+          <Route path='/share' element={<SharePage />}/>
           <Route path="*" element={<MainPage />}/>
         </Routes>
       </MusicProvider>

@@ -19,6 +19,7 @@ a {
 }
 
 .wrapper {
+    margin-top: 8px;
     display: grid;
     align-items: start;
     grid-template-areas: 
@@ -38,4 +39,5 @@ a {
     "navbar"
     "playlists";
 }
+
 

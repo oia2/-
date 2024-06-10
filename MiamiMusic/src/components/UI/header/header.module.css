@@ -1,7 +1,7 @@
 .header {
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
     padding: 16px 24px 16px 24px; 
     background-color: #67C9CD;
     border-radius: 8px 8px 0 0;

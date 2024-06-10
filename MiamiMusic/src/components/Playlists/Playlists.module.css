@@ -1,10 +1,11 @@
 .playlists {
-   grid-area: playlists;
-   box-shadow: 0px 8px 24px rgba(129, 135, 189, 0.15);
+    grid-area: playlists;
+    box-shadow: 0px 8px 24px rgba(129, 135, 189, 0.15);
     width: 420px;
     background-color: #fff;
     border-radius: 8px;
     min-height: 80vh;
+    overflow-y: auto;
 }
 
 .head {
@@ -36,12 +37,25 @@
 
 .plugArea {
     padding: 0px 8px 8px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.plugList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    overflow-y: auto;
+    max-height: calc(80vh - 150px);
 }
 
 .plug {
     border-radius: 8px;
     background-color: #F5F7F9;
     padding: 16px;
+    width: calc(50% - 8px);
+    box-sizing: border-box;
 }
 
 .plug__text {
@@ -50,15 +64,94 @@
     margin-bottom: 8px;
 }
 
-.plug__discription{
+.plug__discription {
     display: block;
     font-size: 14px;
-    margin-bottom: 12px ;
+    margin-bottom: 12px;
 }
 
-.plug__button{
+.plug__button {
     font-size: 14px;
     padding: 5px 16px;
     border-radius: 24px;
     border: 1px solid black;
+}
+
+.plusImg__btn {
+    cursor: pointer;
+    background: none;
+    border: 0;
+}
+
+.menu {
+    padding: 16px;
+    z-index: 999;
+    left: 34%;
+    top: 2%;
+    position: fixed;
+    width: 500px;
+    height: 600px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0px 8px 24px rgba(129, 135, 189, 0.15);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.crossImg__btn {
+    cursor: pointer;
+    background: none;
+    border: 0;
+}
+
+.crossImg {
+    width: 22px;
+    height: 22px;
+    transform: rotate(45deg);
+}
+
+.menu__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input {
+    width: 292px;
+    height: 38px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 18px;
+    border: 2px solid #A8DADC;
+}
+
+.input:focus {
+    outline: 1px solid #67C9CD;
+}
+
+.menu__content {
+    margin-top: 16px;
+}
+
+.content__title {
+    margin-left: 16px;
+    font-size: 20px;
+    margin-bottom: 16px;
+}
+
+.btn__delete {
+    color: #fff;
+    font-size: 16px;
+    border-radius: 8px;
+    width: 120px;
+    height: 38px;
+    border: 1px solid #67C9CD;
+    background-color: #67C9CD;
+    cursor: pointer;
 }

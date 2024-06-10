@@ -146,3 +146,12 @@
 .shuffleInactive {
     opacity: 0.6;
 }
+
+.playlistControls {
+    display: flex;
+    align-items: center;
+}
+
+.heart {
+    margin-right: 10px;
+}

@@ -72,6 +72,26 @@ class Store {
             console.log(e.response?.data?.message)
         }
     }
+
+    async checkUser(email) {
+        try {
+            const response = await axios.post('http://localhost:5000/api/checkUser', { email });
+            return response.data;
+        } catch (e) {
+            console.log(e.response?.data?.message);
+            return { exists: false };
+        }
+    }
+
+    async checkPlaylist(title) {
+        try {
+            const response = await axios.post('http://localhost:5000/api/checkPlaylist', { title });
+            return response.data;
+        } catch (e) {
+            console.log(e.response?.data?.message);
+            return { exists: false };
+        }
+    }
 }
 
 export default Store;

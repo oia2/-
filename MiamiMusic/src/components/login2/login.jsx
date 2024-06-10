@@ -4,7 +4,7 @@ import {observer} from "mobx-react-lite";
 
 const Login = () => {
     const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [password, setPassword] = useState('')    
     const {store} = useContext(Context);
     return (
         <div>

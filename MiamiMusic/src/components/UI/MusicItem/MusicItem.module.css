@@ -1,0 +1,171 @@
+.title {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.title:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+.title__img {
+    width: 50px;
+    height: 50px;
+}
+
+.play__bg {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(24, 11, 11,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.play {
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    background-color: #A8DADC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.play__imgPlay {
+    width: 14px;
+    height: 13px;
+}
+
+.play__imgStop {
+    width: 12px;
+    height: 12px;
+}
+
+.title__imgWrapper {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
+    position: relative; 
+}
+
+.title__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.trackTitle {    
+    width: 350px;
+    font-weight: 500;
+    margin-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.author {
+    color: #777777;
+}
+
+.blackHeart {
+    width: 22px;
+    height: 22px;
+}
+
+.like{
+    margin-right: 10px;
+    cursor: pointer;
+    border: 0;
+    background: none;
+}
+
+.plus{
+    cursor: pointer;
+    border: 0;
+    background: none;
+}
+
+.plusIcon {
+    width: 18px;
+    height: 18px;
+    opacity: 0.6;
+}
+
+.plusIcon:hover {
+    opacity: 1;
+}
+
+.buttons {
+    align-items: center;
+    position: relative;
+}
+
+.playlistList{
+    position: absolute;
+    z-index: 999;
+    width: 255px;
+    height: 255px;
+    background-color: #fff;
+    box-shadow: 0px 8px 24px rgba(129, 135, 189, 0.15);
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.playlistListItem {
+    display: flex;
+    align-items: center;
+}
+
+.playlistListItem:not(:last-child){
+    margin-bottom: 3px;
+}
+
+.plus {
+    margin-left: 8px;
+}
+
+.listTitle {
+   margin-bottom: 8px;
+   color: #777777;
+}
+
+.inputCreate {
+    margin-top: 5px;
+    border: 1px solid #777;
+    font-size: 18px;
+    border-radius: 8px;
+    padding: 6px;
+    width: 100%;
+}
+
+.playlistListItems {
+    height: 165px;
+    overflow-y: auto;
+}
+
+.inputCreate:focus {
+    border: 1px solid #000;
+}
+
+.minusIcon {
+    width: 22px;
+    height: 22px;
+    opacity: 0.6;
+}
+
+.minus {
+    cursor: pointer;
+    border: 0;
+    background: none;
+    margin-left: 4px;
+}
+
+.minusIcon:hover {
+    opacity: 1;
+}
